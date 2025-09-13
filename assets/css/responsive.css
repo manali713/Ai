@@ -1,0 +1,980 @@
+@media (min-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero-visual {
+        display: block;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1280px) {
+    .why-cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content { text-align: center; }
+    .cta-group { justify-content: center; }
+    .expertise-tags { justify-content: center; }
+    .footer-content { grid-template-columns: repeat(2, 1fr); }
+    .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+    .section {
+        padding: 3rem 0;
+    }
+
+    /* Enhanced Typography Scaling */
+    .workflow-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .hero-title, .main-title {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    .workflow-subtitle, .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    /* Enhanced Grid Systems */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        padding-top: 120px; /* Account for mobile nav */
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .why-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Enhanced Mobile Navigation - Keep Original Layout */
+    .main-nav {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: calc(100% - 30px);
+    }
+
+    .main-nav .nav-content {
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .main-nav .nav-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-nav .nav-link {
+        margin: 0;
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: auto;
+    }
+
+    .main-nav .nav-link .link-text {
+        display: none;
+    }
+
+    .main-nav .nav-link i {
+        font-size: 1.1rem;
+    }
+
+    /* Show text on larger mobile screens */
+    @media (min-width: 480px) {
+        .main-nav .nav-link .link-text {
+            display: inline;
+            margin-left: 0.5rem;
+        }
+
+        .main-nav .nav-link {
+            padding: 0.75rem 1rem;
+        }
+    }
+
+    /* Enhanced scroll behavior with smooth animations */
+    .main-nav {
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .main-nav.scrolled .nav-content {
+        padding: 0.4rem 0.8rem;
+        background: rgba(10, 10, 15, 0.8);
+    }
+
+    .main-nav.scrolled .nav-link {
+        padding: 0.6rem 0.4rem;
+    }
+
+    .main-nav.scrolled .nav-link .link-text {
+        display: none;
+    }
+
+    /* Smooth transitions for nav links */
+    .main-nav .nav-link {
+        transition: all 0.3s ease;
+    }
+
+    .main-nav .nav-link:hover {
+        transform: translateY(-1px);
+    }
+
+    .main-nav .nav-link.active {
+        transform: scale(1.05);
+    }
+
+    /* Mobile-specific animations */
+    /* @media (max-width: 768px) {
+        .main-nav .nav-link:active {
+            transform: scale(0.95);
+        }
+    } */
+
+    /* Enhanced Card Layouts */
+    .expertise-card, .why-card {
+        padding: 2rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-activities, .card-experience {
+        margin-top: 1.5rem;
+    }
+
+    .activities-list li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Timeline Responsive */
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 16px;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+    }
+    .timeline-date {
+        flex-basis: auto;
+        padding: 0.5rem 1rem;
+        background: var(--accent-color);
+        color: white;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        align-self: flex-start;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-tags {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .timeline-tags span {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 12px;
+        color: var(--accent-color);
+    }
+
+    /* Typography responsive */
+    .main-title, .page-title {
+        font-size: 2.5rem;
+    }
+
+    .workflow-title-large {
+        font-size: 2rem;
+    }
+
+    .content-title {
+        font-size: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .case-study-card, .case-study-card:nth-child(even) {
+        flex-direction: column;
+    }
+    .case-study-image {
+        width: 100%;
+        min-height: 200px;
+        margin: 0;
+        border-radius: 16px 16px 0 0;
+    }
+    .case-study-content {
+        padding: 1.5rem;
+    }
+
+    /* Blog responsive styles */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .blog-filters {
+        gap: 1rem;
+    }
+
+    .search-wrapper {
+        max-width: 100%;
+    }
+
+    .filter-chips {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .filter-chip {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .blog-card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Blog detail responsive styles */
+    .article-meta {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-image {
+        height: 250px;
+    }
+
+    .article-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .article-share {
+        align-self: center;
+        text-align: center;
+    }
+
+    /* Case study detail responsive styles */
+    .case-study-meta {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .case-study-title {
+        font-size: 2rem;
+    }
+
+    .case-study-image {
+        height: 250px;
+    }
+
+    .outcome-highlight {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .points-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .why-card { padding: 2rem; }
+    .why-cards-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-column h4::after { left: 50%; transform: translateX(-50%); }
+    .social-links { justify-content: center; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .contact-content h2 { text-align: center; }
+
+    /* AI Automation Page Responsive */
+    .main-title-h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+    }
+
+    /* Resume Page Responsive */
+    .resume-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .resume-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .card-3d {
+        transform: none !important; /* Disable 3D effects on mobile */
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Case Studies Page Responsive */
+    .casestudy-hero {
+        padding: 120px 0 4rem;
+        text-align: center;
+    }
+
+    .casestudy-badge {
+        margin-bottom: 1.5rem;
+    }
+
+    .metrics-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .projects-cta {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    /* Blog Page Responsive */
+    .blog-filters {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+
+    .filter-chips {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Form Responsive */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* Enhanced Form Validation Styles */
+    .form-group input.error,
+    .form-group textarea.error {
+        border-color: #ef4444;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    }
+
+    .field-error {
+        color: #ef4444;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        display: block;
+    }
+
+    .form-status {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .form-status.error {
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+    }
+
+    .form-status.success {
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        color: var(--accent-color);
+    }
+
+    .form-status.loading {
+        background: rgba(156, 163, 175, 0.1);
+        border: 1px solid rgba(156, 163, 175, 0.2);
+        color: var(--text-secondary);
+    }
+}
+
+/* Cross-Page Consistency Styles */
+@media (max-width: 768px) {
+    /* Ensure consistent navigation across all pages */
+    .main-nav {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        transform: none;
+        width: calc(100% - 20px);
+        z-index: 1000;
+    }
+
+    /* Consistent hero sections */
+    .hero-section,
+    .resume-hero,
+    .casestudy-hero {
+        padding-top: 120px;
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+
+    /* Consistent section spacing */
+    .section {
+        padding: 3rem 0;
+    }
+
+    /* Consistent container padding */
+    .container {
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+
+    /* Consistent card layouts */
+    .expertise-card,
+    .why-card,
+    .blog-card,
+    .case-study-card,
+    .preview-case-card {
+        margin-bottom: 1.5rem;
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    /* Consistent button styles */
+    .cta-button,
+    .primary-btn,
+    .secondary-btn {
+        min-height: 48px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border-radius: 50px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    /* Consistent grid layouts */
+    .expertise-grid,
+    .why-cards-grid,
+    .blog-grid,
+    .featured-grid,
+    .overview-grid,
+    .points-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Consistent typography */
+    .main-title,
+    .page-title,
+    .workflow-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .workflow-subtitle,
+    .hero-subtitle,
+    .casestudy-description {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* Consistent contact sections */
+    #contact {
+        padding: 4rem 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-content {
+        text-align: center;
+    }
+
+    /* Consistent footer */
+    .footer {
+        margin-top: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* Consistent form styles */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 12px;
+        border: 2px solid var(--glass-border);
+        background: var(--glass-bg);
+        color: var(--text-primary);
+    }
+
+    /* Consistent loading and empty states */
+    .loading-state,
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 1rem;
+    }
+
+    /* Consistent metrics showcase */
+    .metrics-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .metric-card {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    /* Consistent CTA groups */
+    .cta-group,
+    .projects-cta {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    /* Consistent badge styles */
+    .status-badge,
+    .tag,
+    .casestudy-badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin: 0.25rem;
+    }
+
+    /* Consistent timeline styles */
+    .timeline-item {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 16px;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+    }
+
+    /* Consistent filter styles */
+    .blog-filters,
+    .filter-chips {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .filter-chip {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    /* Consistent search styles */
+    .search-wrapper {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 1rem;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 1rem 1rem 1rem 3rem;
+        font-size: 1rem;
+        border-radius: 50px;
+    }
+}
+
+/* Ensure consistent experience across all devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .main-title,
+    .page-title,
+    .workflow-title {
+        font-size: 2rem;
+    }
+
+    .metrics-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button,
+    .primary-btn,
+    .secondary-btn {
+        font-size: 0.9rem;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 2rem !important; }
+    .cta-group { flex-direction: column; align-items: stretch; }
+    .primary-btn, .secondary-btn { justify-content: center; }
+}
+
+/* ------------------------------------------- */
+/* --- NEW HERO RESPONSIVE STYLES (APPENDED) --- */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    .resume-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .expertise-tags {
+        justify-content: center;
+    }
+    
+    .metrics-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .projects-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- ADDITIONAL RESPONSIVE STYLES FOR BLOG AND CASE STUDIES --- */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .points-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .article-title,
+    .case-study-title {
+        font-size: 1.75rem;
+    }
+
+    .article-excerpt,
+    .case-study-excerpt {
+        font-size: 1rem;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .outcome-highlight {
+        padding: 1rem;
+    }
+
+    .article-body,
+    .case-study-body {
+        font-size: 1rem;
+    }
+
+    .filter-chips {
+        flex-wrap: wrap;
+    }
+
+    .filter-chip {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Newsletter Section Responsive Styles */
+.newsletter-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-form {
+    margin-top: 2rem;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group-inline input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--glass-border);
+    border-radius: 50px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group-inline input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group-inline button {
+    padding: 1rem 2rem;
+    white-space: nowrap;
+}
+
+.form-status {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.newsletter-disclaimer {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.text-link {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .form-group-inline {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-group-inline button {
+        width: 100%;
+    }
+
+    .newsletter-section {
+        padding: 3rem 0;
+    }
+}
+
+/* Mobile Touch Optimization */
+@media (max-width: 768px) {
+    /* Increase touch target sizes */
+    .cta-button, .primary-btn, .secondary-btn {
+        min-height: 48px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Optimize form inputs for mobile */
+    input, textarea, select {
+        min-height: 48px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Remove hover effects on touch devices */
+    .expertise-card:hover,
+    .why-card:hover,
+    .blog-card:hover,
+    .case-study-card:hover {
+        transform: none;
+    }
+
+    /* Optimize spacing for mobile */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Mobile-specific animations */
+    .reveal {
+        transform: translateY(30px);
+    }
+
+    /* Disable complex animations on mobile for performance */
+    @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .floating-orb,
+        .particle,
+        .crystal {
+            animation: none;
+            transform: none;
+            transition: none;
+        }
+    }
+}
